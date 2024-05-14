@@ -11,16 +11,6 @@ function randomNumber(min, max) {
 function fightOrSkip() {
     // ask player if they'd like to fight or run
     let promptFight = window.prompt(`Would you like to fight or skip this battle? Enter 1 to fight or 2 to skip.`);
-
-    // validate prompt answer
-    // if (promptFight === `` || promptFight === null) {
-    //   window.alert(`You need to provide a valid answer! Please try again.`);
-    //   // uses return to call the function again and stop the rest of the function from running
-      
-    // };
-  
-    // convert promptFight to all lowercase so we can validate input easier
-    // promptFight = promptFight.toLowerCase();
   
     if (promptFight === `2`) {
       // confirm player wants to skip, triggered by progressing promptFight to the SKIP option
