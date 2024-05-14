@@ -10,19 +10,19 @@ function randomNumber(min, max) {
   // function to check if player wants to fight or skip
 function fightOrSkip() {
     // ask player if they'd like to fight or run
-    let promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
-  
+    let promptFight = window.prompt(`Would you like to fight or skip this battle? Enter 1 to fight or 2 to skip.`);
+
     // validate prompt answer
-    if (promptFight === `` || promptFight === null) {
-      window.alert(`You need to provide a valid answer! Please try again.`);
-      // uses return to call the function again and stop the rest of the function from running
-      return fightOrSkip();
-    };
+    // if (promptFight === `` || promptFight === null) {
+    //   window.alert(`You need to provide a valid answer! Please try again.`);
+    //   // uses return to call the function again and stop the rest of the function from running
+      
+    // };
   
     // convert promptFight to all lowercase so we can validate input easier
-    promptFight = promptFight.toLowerCase();
+    // promptFight = promptFight.toLowerCase();
   
-    if (promptFight === `skip`) {
+    if (promptFight === `2`) {
       // confirm player wants to skip, triggered by progressing promptFight to the SKIP option
       let confirmSkip = window.confirm(`Are you sure you'd like to skip?`);
   
@@ -36,8 +36,15 @@ function fightOrSkip() {
         // return true if player wants to leave
         return true;
       };
+      //more validation to the below code. The else if and else allow us to accept the users decision to fight
+      //while allowing us to reject other inputs
+    }else if(promptFight === `1`){
+      return false;
+    }else{
+      window.alert(`Please provide a valid response.`)
+      return fightOrSkip();
     };
-    return false;
+    
   };
   
   // fight function (now with parameter for enemy's object holding name, health, and attack values)
@@ -168,7 +175,7 @@ function endGame() {
     }
   
     // ask player if they'd like to play again
-    var playAgainConfirm = window.confirm(`Would you like to play again?`);
+    let playAgainConfirm = window.confirm(`Would you like to play again?`);
   
     if (playAgainConfirm) {
       startGame();
@@ -248,7 +255,7 @@ function getPlayerName() {
     }
   };
   
-  var enemyInfo = [
+  let enemyInfo = [
     {
       name: `Roborto`,
       attack: randomNumber(10, 14)
