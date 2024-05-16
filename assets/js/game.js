@@ -1,6 +1,6 @@
 /* GAME FUNCTIONS */
 
-// function to generate a random numeric value
+// function to generate a random numeric value --within a range of two numbers--
 function randomNumber(min, max) {
     let value = Math.floor(Math.random() * (max - min) + min);
   
@@ -108,8 +108,7 @@ function startGame() {
       // if player is still alive, keep fighting
       if (playerInfo.health > 0) {
         // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
-        //Edit #1 - changing this string into template literal as to match the rest of file
-        window.alert(`Welcome to Robot Gladiators! Round ${i + 1}, fight!`/*"Welcome to Robot Gladiators! Round " + (i + 1)*/);
+        window.alert(`Welcome to Robot Gladiators! Round ${i + 1}, fight!`);
   
         // pick new enemy to fight based on the index of the enemyInfo array
         let pickedEnemyObj = enemyInfo[i];
@@ -152,7 +151,7 @@ function endGame() {
     let highScore = localStorage.getItem(`highscore`);
     if (highScore === null) {
       highScore = 0;
-    }
+    };
   
     // if player has more money than the high score, player has new high score!
     if (playerInfo.money > highScore) {
@@ -162,7 +161,7 @@ function endGame() {
       alert(`${playerInfo.name} now has the highscore of ${playerInfo.money}!`);
     } else {
       alert(`${playerInfo.name} did not beat the highscore of ${highScore}.`);
-    }
+    };
   
     // ask player if they'd like to play again
     let playAgainConfirm = window.confirm(`Would you like to play again?`);
@@ -171,7 +170,7 @@ function endGame() {
       startGame();
     } else {
       window.alert(`Thank you for playing Robot Gladiators! Come back soon!`);
-    }
+    };
   };
   
   // go to shop between battles function
@@ -197,7 +196,7 @@ function shop() {
         window.alert(`You did not pick a valid option. Try again.`);
         shop();
         break;
-    }
+    };
   };
   
   // function to set name
