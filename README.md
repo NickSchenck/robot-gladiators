@@ -15,6 +15,7 @@
   N/A
   ## Usage
   Run the index.html file in a browser of your choice.
+  Alternately you can visit this link: https://nickschenck.github.io/robot-gladiators/
   ## Contributing
   N/A
   ## License
