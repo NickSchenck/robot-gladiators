@@ -1,7 +1,7 @@
 [![Generic badge](https://img.shields.io/badge/license-N/A-<COLOR>.svg)](#license)
   # Robot Gladiators
   ## Description
-  A text based app for battling your robot against others.
+  A text/browser based app for battling yout robot against others.
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -14,12 +14,11 @@
   ## Tests
   N/A
   ## Usage
-  Run the index.html file in a browser of your choice.
-  Alternately you can visit this link: https://nickschenck.github.io/robot-gladiators/
+  Run the index.html file in a browser of your choice. Alternately you can visit this link: https://nickschenck.github.io/robot-gladiators/
   ## Contributing
   N/A
   ## License
-  ### This app is licensed under the [N/A](This app has no license.) license.
+  ### This app has no applicable license.
   ## Questions
   * GitHub: [NickSchenck](https://github.com/NickSchenck)
   * Email: 
